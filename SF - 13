@@ -1,0 +1,13 @@
+tickets = int(input("Необходимое количество билетов:"))
+total = 0
+for i in range(tickets):
+    age = int(input("Возраст покупателя:"))
+    if age < 18:
+        total += 0
+    elif 18 <= age < 25:
+        total += 990
+    else:
+        total += 1390
+if tickets > 3:
+    total -= total/10
+print("Всего к оплате =", int(total), "Руб. за", tickets, "билетов")
